@@ -1,0 +1,127 @@
+.wrapper-cart table {
+  border-spacing: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+}
+.wrapper-cart table thead {
+  background-color: #3bb77e;
+  color: #fff;
+}
+.wrapper-cart table thead tr th {
+  padding: 20px;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+.wrapper-cart table thead tr th .remove-product {
+  color: red;
+}
+.wrapper-cart table tbody .no-product {
+  display: block;
+  width: 100%;
+  color: #3bb77e;
+  text-align: center;
+  font-size: 25px;
+}
+.wrapper-cart table tbody tr {
+  box-shadow: 0px 3px 10px -3px #3bb77e;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.wrapper-cart table tbody tr td {
+  text-align: center;
+}
+.wrapper-cart table tbody tr td img {
+  max-width: 100px;
+}
+.wrapper-cart table tbody tr td .name {
+  color: #3bb77e;
+  font-size: 25px;
+  font-weight: bold;
+}
+.wrapper-cart table tbody tr td .price {
+  font-size: 25px;
+  font-weight: 800;
+  color: #3bb77e;
+}
+.wrapper-cart table tbody tr .actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 57px;
+}
+.wrapper-cart table tbody tr .actions .plus,
+.wrapper-cart table tbody tr .actions .minus {
+  box-shadow: 0px 0px 5px 0px #3bb77e;
+  padding: 0px 7px;
+  color: #3bb77e;
+  cursor: pointer;
+  font-size: 27px;
+  font-weight: 900;
+  line-height: 1;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.wrapper-cart table tbody tr .actions .quantity {
+  box-shadow: 0px 0px 5px 0px green;
+  cursor: pointer;
+  padding: 3px;
+  color: green;
+  font-size: 25px;
+}
+.wrapper-cart table tbody tr .trash {
+  font-size: 25px;
+  color: red;
+  cursor: pointer;
+}
+.wrapper-cart .cart-action-btn {
+  padding: 20px 0;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.wrapper-cart .cart-action-btn form button {
+  color: #fff;
+  padding: 6px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: 900;
+  margin: 20px;
+}
+.wrapper-cart .cart-action-btn form .check-out {
+  background-color: #0075ff;
+}
+.wrapper-cart .cart-action-btn form .check-out a {
+  color: #fff;
+}
+.wrapper-cart .cart-action-btn form .clear-cart {
+  background-color: #3bb77e;
+}
+.wrapper-cart .total-price {
+  height: 36px;
+  width: 167px;
+  padding: 7px;
+  font-size: 20px;
+  font-weight: bold;
+  color: green;
+  width: 170px;
+  height: 36px;
+  margin: 10px;
+  border: 1px solid green;
+  border-radius: 10px 0px 10px 0px;
+  -webkit-border-radius: 10px 0px 10px 0px;
+  -moz-border-radius: 10px 0px 10px 0px;
+  -ms-border-radius: 10px 0px 10px 0px;
+  -o-border-radius: 10px 0px 10px 0px;
+}/*# sourceMappingURL=cart-page.css.map */

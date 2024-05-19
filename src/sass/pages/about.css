@@ -1,0 +1,153 @@
+.about .info, .about .details {
+  box-shadow: 0px 0px 3px 0px #3bb77e;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  flex: 1;
+}
+
+.managers .about-us article h2, .about .details h1 {
+  line-height: 1.3;
+  color: #3bb77e;
+}
+
+.managers .about-us article p, .about .details article {
+  line-height: 1.6;
+  letter-spacing: 1px;
+  font-size: 17px;
+  font-family: sans-serif;
+}
+
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(246, 246, 246, 0.74);
+  padding: 50px 10px;
+  margin: 50px auto;
+}
+.about .details {
+  margin: 20px;
+}
+.about .details strong {
+  color: rgb(238, 154, 0);
+}
+.about .info {
+  padding: 0;
+  flex: 1;
+}
+.about .info .about-img {
+  background-image: url("../../images/bg.png");
+  width: 100%;
+  background-size: cover;
+  text-align: center;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.about .info .about-img img {
+  width: 300px;
+}
+@media (max-width: 542px) {
+  .about .info .about-img img {
+    width: 100%;
+  }
+}
+.about .info .achievement {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+.about .info .achievement .box {
+  background-color: #3bb77e;
+  margin: 10px;
+  text-align: center;
+}
+.about .info .achievement .box .number {
+  margin-bottom: 3px;
+  display: block;
+  padding: 3px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+}
+.about .info .achievement .box span {
+  display: block;
+  padding: 3px;
+  color: #332c2c;
+  font-size: 22px;
+}
+
+/*============ Managers section =============*/
+.managers {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 80px 10px;
+  margin: 30px auto;
+}
+.managers .managers-img {
+  margin: 20px;
+  flex: 1;
+}
+.managers .managers-img .first-manager {
+  top: 170px;
+  width: 200px;
+  left: 200px;
+  border: 10px solid #3bb77e;
+}
+@media (max-width: 992px) {
+  .managers .managers-img .first-manager {
+    display: none;
+  }
+}
+.managers .managers-img .second-manager {
+  width: 350px;
+}
+@media (max-width: 400px) {
+  .managers .managers-img .second-manager {
+    width: 150px;
+  }
+}
+.managers .about-us {
+  flex: 1;
+}
+.managers .about-us article strong {
+  color: rgb(238, 154, 0);
+}
+.managers .about-us article p {
+  min-width: 240px;
+}
+.managers .about-us .our-services li {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@media (max-width: 1200px) {
+  .managers .about-us .our-services li {
+    justify-content: center;
+    text-align: center;
+  }
+}
+.managers .about-us .our-services li .icon {
+  margin: 10px;
+}
+.managers .about-us .our-services li .icon img {
+  max-width: 100%;
+}
+.managers .about-us .our-services li .details span {
+  font-size: 20px;
+  color: green;
+  font-weight: 900;
+}
+.managers .about-us .our-services li .details p {
+  line-height: 1.1;
+  font-size: 17px;
+  color: #555;
+}
+@media (max-width: 772px) {
+  .managers {
+    text-align: center;
+  }
+}/*# sourceMappingURL=about.css.map */

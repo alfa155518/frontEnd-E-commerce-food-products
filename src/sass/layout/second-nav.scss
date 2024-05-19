@@ -1,0 +1,99 @@
+@use "../helpers/variables" as *;
+@use "../helpers/mixins" as *;
+
+/* Start Second Nav Bar */
+.second-nav {
+  padding: 5px 7px;
+  box-shadow: none;
+  .btn-categories {
+    background: $mainColor;
+    padding: 8px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  // Pages Links
+  .links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 5px;
+    @include transition(1s, ease-in-out);
+    li {
+      padding: 10px;
+      margin: 5px;
+      position: relative;
+
+      // Make Effect on Links
+      &::before {
+        @include pseudoElement(0px, 2px, $mainColor) {
+          content: "";
+          left: 50%;
+          bottom: 7px;
+          transform: translate(-50%, -50%);
+          -webkit-transform: translate(-50%, -50%);
+          -moz-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          -o-transform: translate(-50%, -50%);
+          @include transition(0.8s, ease-in-out);
+        }
+      }
+      &:hover::before {
+        width: 60px;
+        @include transition(0.8s, ease-in-out);
+      }
+      a {
+        color: $wordsColor;
+        font-size: 19px;
+        user-select: none;
+        &.active {
+          font-weight: bold;
+          color: $mainColor;
+        }
+      }
+    }
+  }
+  .support {
+    display: flex;
+    h5 {
+      padding: 0 10px;
+      svg {
+        font-size: 30px;
+        color: $mainColor;
+      }
+    }
+    > div {
+      p {
+        color: $mainColor;
+        font-size: 17px;
+        font-weight: 900;
+        margin-bottom: 0;
+        margin-left: 10px;
+      }
+    }
+  }
+  //============ Responsive All Screens ==========
+  @media (max-width: 991px) {
+    .btn-categories,
+    .support {
+      display: none;
+    }
+    .links {
+      position: absolute;
+      top: -100%;
+      width: 100%;
+      background-color: #141514e0;
+      color: $whiteColor;
+      right: 0;
+      flex-direction: column;
+      z-index: 5;
+      align-items: flex-start;
+      a {
+        color: #4caf50 !important;
+      }
+    }
+  }
+}
+
+/* End Second Nav Bar */

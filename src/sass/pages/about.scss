@@ -1,0 +1,166 @@
+@use "../helpers/mixins" as *;
+@use "../helpers/variables" as *;
+
+%styled-section {
+  box-shadow: 0px 0px 3px 0px $mainColor;
+  background-color: $whiteColor;
+  padding: 10px;
+  border-radius: 5px;
+  flex: 1;
+}
+
+%styled-head-section {
+  line-height: 1.3;
+  color: $mainColor;
+}
+
+%styled-article {
+  line-height: 1.6;
+  letter-spacing: 1px;
+  font-size: 17px;
+  font-family: sans-serif;
+}
+
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(246 246 246 / 74%);
+  padding: 50px 10px;
+  margin: 50px auto;
+  .details {
+    @extend %styled-section;
+    margin: 20px;
+    h1 {
+      @extend %styled-head-section;
+    }
+    strong {
+      color: $starsColor;
+    }
+    article {
+      @extend %styled-article;
+    }
+  }
+  .info {
+    @extend %styled-section;
+    padding: 0;
+    flex: 1;
+    .about-img {
+      background-image: url("../../images/bg.png");
+      width: 100%;
+      background-size: cover;
+      text-align: center;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -o-border-radius: 5px;
+      img {
+        width: 300px;
+        @media (max-width: 542px) {
+          width: 100%;
+        }
+      }
+    }
+    .achievement {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      .box {
+        background-color: $mainColor;
+        margin: 10px;
+        text-align: center;
+        .number {
+          margin-bottom: 3px;
+          display: block;
+          padding: 3px;
+          color: $whiteColor;
+          font-size: 20px;
+          font-weight: bold;
+        }
+        span {
+          display: block;
+          padding: 3px;
+          color: #332c2c;
+          font-size: 22px;
+        }
+      }
+    }
+  }
+}
+
+/*============ Managers section =============*/
+.managers {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 80px 10px;
+  margin: 30px auto;
+  .managers-img {
+    margin: 20px;
+    flex: 1;
+    .first-manager {
+      top: 170px;
+      width: 200px;
+      left: 200px;
+      border: 10px solid $mainColor;
+      @media (max-width: 992px) {
+        display: none;
+      }
+    }
+    .second-manager {
+      width: 350px;
+      @media (max-width: 400px) {
+        width: 150px;
+      }
+    }
+  }
+  // About Managers
+  .about-us {
+    flex: 1;
+    article {
+      strong {
+        color: $starsColor;
+      }
+      h2 {
+        @extend %styled-head-section;
+      }
+      p {
+        @extend %styled-article;
+        min-width: 240px;
+      }
+    }
+    // Our Services
+    .our-services {
+      li {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        @media (max-width: 1200px) {
+          justify-content: center;
+          text-align: center;
+        }
+        .icon {
+          margin: 10px;
+          img {
+            max-width: 100%;
+          }
+        }
+        .details {
+          span {
+            font-size: 20px;
+            color: green;
+            font-weight: 900;
+          }
+          p {
+            line-height: 1.1;
+            font-size: 17px;
+            color: $wordsColor;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 772px) {
+    text-align: center;
+  }
+}

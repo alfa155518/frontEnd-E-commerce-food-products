@@ -1,0 +1,137 @@
+@use "../helpers/mixins" as *;
+@use "../helpers/variables" as *;
+
+%styled-section {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper-blog {
+  .section-img {
+    padding-bottom: 20px;
+  }
+  .main-img {
+    background-image: url("../../images//blog-1.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 50vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1;
+    position: relative;
+    margin-top: 30px;
+    &::before {
+      @include pseudoElement(100%, 100%, rgb(49 45 45 / 80%)) {
+        content: "";
+        top: 0;
+        z-index: -1;
+      }
+    }
+    h2 {
+      font-size: 50px;
+      letter-spacing: 1px;
+      color: $mainColor;
+    }
+  }
+  .blog-content-container {
+    padding: 30px 10px;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    // Section Blog Content
+    .blog-content {
+      flex: 3;
+      margin-right: 60px;
+      h3 {
+        letter-spacing: 1px;
+        font-weight: 900;
+        font-size: 30px;
+        color: $wordsColor;
+      }
+      article {
+        min-width: 350px;
+        line-height: 1.8;
+        font-size: 18px;
+        font-family: sans-serif;
+        margin-bottom: 20px;
+      }
+      .blog-img {
+        text-align: center;
+        padding: 10px 0;
+        margin: 20px auto;
+        img {
+          max-width: 100%;
+          object-fit: cover;
+        }
+      }
+      p {
+        padding: 20px 0;
+        margin: 10px auto;
+        line-height: 1.6;
+        font-size: 17px;
+        font-family: sans-serif;
+      }
+    }
+    // Section Related Blog
+    .related-blog {
+      flex: 1;
+      text-align: center;
+      h2 {
+        font-size: 30px;
+        letter-spacing: 2px;
+      }
+      .articles {
+        @extend %styled-section;
+        box-shadow: 0px 0px 5px 1px #aaa;
+        padding: 20px;
+        li:not(:last-child) {
+          margin-bottom: 20px;
+        }
+        li {
+          @extend %styled-section;
+          flex: 1;
+          img {
+            width: 250px;
+            object-fit: cover;
+          }
+          strong {
+            line-height: 1.6;
+            font-size: 20px;
+            font-family: system-ui;
+            color: $mainColor;
+          }
+          span {
+            font-size: 17px;
+            color: $wordsColor;
+          }
+        }
+      }
+    }
+    @media (max-width: 772px) {
+      text-align: center;
+      .blog-content {
+        margin-right: 0;
+      }
+    }
+    @media (max-width: 400px) {
+      .blog-content {
+        article {
+          min-width: 200px;
+        }
+      }
+      .related-blog {
+        .blog-img {
+          img {
+            width: 250px;
+          }
+        }
+      }
+    }
+  }
+}

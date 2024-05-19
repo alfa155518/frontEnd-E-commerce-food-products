@@ -1,0 +1,77 @@
+@use "../helpers/variables" as *;
+
+.news-letter {
+  background-image: url("../../images/bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  padding: 20px;
+  margin: 60px 10px 20px 10px;
+  border-radius: 5px;
+
+  //========= Section Img ========
+  .container-img {
+    flex: 1;
+    img {
+      width: 100%;
+    }
+  }
+
+  //============ Letter And Send Message =========
+  .letter {
+    flex: 1;
+    h2 {
+      font-size: 40px;
+      color: $wordsColor;
+      margin-bottom: 10px;
+    }
+    strong {
+      font-size: 18px;
+      display: block;
+      margin-bottom: 30px;
+      em {
+        color: $mainColor;
+        font-size: 30px;
+      }
+    }
+    form {
+      position: relative;
+      input {
+        width: 100%;
+        padding: 10px;
+        outline: none;
+        border-radius: 20px;
+        border: 1px solid $mainColor;
+        font-size: 17px;
+        color: $wordsColor;
+      }
+      button {
+        position: absolute;
+        color: $whiteColor;
+        background-color: $mainColor;
+        border: none;
+        outline: none;
+        right: 0px;
+        padding: 0px 45px;
+        border-radius: 20px;
+        cursor: pointer;
+        line-height: 2.5;
+      }
+    }
+  }
+  @media (max-width: 772px) {
+    .container-img {
+      display: none;
+    }
+  }
+  @media (max-width: 442px) {
+    button {
+      display: none;
+    }
+  }
+}

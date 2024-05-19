@@ -1,0 +1,45 @@
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  padding: 20px 10px;
+}
+.services .box {
+  display: flex;
+  align-items: end;
+  background-color: rgba(96, 125, 139, 0.2196078431);
+  margin: 10px;
+  border-radius: 5px;
+  transition: 0.8s ease-in-out;
+  -webkit-transition: 0.8s ease-in-out;
+  -moz-transition: 0.8s ease-in-out;
+  -ms-transition: 0.8s ease-in-out;
+  -o-transition: 0.8s ease-in-out;
+}
+.services .box:hover {
+  transition: 0.8s ease-in-out;
+  -webkit-transition: 0.8s ease-in-out;
+  -moz-transition: 0.8s ease-in-out;
+  -ms-transition: 0.8s ease-in-out;
+  -o-transition: 0.8s ease-in-out;
+  box-shadow: 0px 0px 3px 1px #aaa;
+  scale: 1.1;
+}
+.services .box .wrapper-img {
+  flex: 1;
+  margin: 5px;
+}
+.services .box .details {
+  flex: 1;
+  padding-bottom: 12px;
+}
+.services .box .details h5 {
+  font-weight: 800;
+  color: #3bb77e;
+  letter-spacing: 2px;
+  font-size: 20px;
+  margin-bottom: 5px;
+  margin-top: 2px;
+}
+.services .box .details span {
+  color: #555;
+}/*# sourceMappingURL=services.css.map */

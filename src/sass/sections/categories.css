@@ -1,0 +1,131 @@
+/*============== All Categories =============*/
+.categories .new-products-side, .categories .filter-by-price, .categories .container-name {
+  box-shadow: 0px 0px 4px 1px #aaa;
+  border-radius: 16px 0px 15px 0px;
+  padding: 10px;
+  margin-bottom: 30px;
+  -webkit-border-radius: 16px 0px 15px 0px;
+  -moz-border-radius: 16px 0px 15px 0px;
+  -ms-border-radius: 16px 0px 15px 0px;
+  -o-border-radius: 16px 0px 15px 0px;
+}
+
+.categories {
+  flex: 1;
+  /* Filter Categories By Prices & Colors & Collections  */
+  /* New Product Side */
+  /* Advertisement */
+}
+.categories .container-name {
+  margin-bottom: 20px;
+}
+.categories .container-name .categories-name {
+  display: block;
+}
+.categories .container-name .categories-name li:not(:first-child) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px auto;
+  padding: 5px;
+  border-radius: 5px;
+  transition: 0.7s ease-in-out;
+  -webkit-transition: 0.7s ease-in-out;
+  -moz-transition: 0.7s ease-in-out;
+  -ms-transition: 0.7s ease-in-out;
+  -o-transition: 0.7s ease-in-out;
+}
+.categories .container-name .categories-name li:not(:first-child):hover {
+  box-shadow: 0px 0px 3px 1px #3bb77e;
+  scale: 0.9;
+}
+.categories .container-name .categories-name li:not(:first-child) img {
+  width: 50px;
+}
+.categories .container-name .categories-name li:not(:first-child) .name {
+  color: #555;
+}
+.categories .container-name .categories-name li:not(:first-child) .number {
+  background-color: #3bb77e;
+  padding: 1px 5px;
+  color: #fff;
+  border-radius: 50%;
+  line-height: 1;
+}
+.categories .filter-by-price .ranges form input[type=range] {
+  accent-color: #3bb77e;
+  margin-bottom: 15px;
+}
+.categories .filter-by-price .ranges form .prices {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: #555;
+  font-size: 17px;
+}
+.categories .filter-by-price .ranges form .prices span {
+  color: #3bb77e;
+  font-weight: bold;
+  font-size: 17px;
+}
+.categories .filter-by-price .ranges form .colors h4,
+.categories .filter-by-price .ranges form .collections h4 {
+  color: #555;
+  font-size: 16px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.categories .filter-by-price .ranges form .colors .box,
+.categories .filter-by-price .ranges form .colors .items,
+.categories .filter-by-price .ranges form .collections .box,
+.categories .filter-by-price .ranges form .collections .items {
+  padding-bottom: 5px;
+}
+.categories .filter-by-price .ranges form .colors .box input[type=checkbox],
+.categories .filter-by-price .ranges form .colors .items input[type=checkbox],
+.categories .filter-by-price .ranges form .collections .box input[type=checkbox],
+.categories .filter-by-price .ranges form .collections .items input[type=checkbox] {
+  accent-color: #3bb77e;
+}
+.categories .filter-by-price .ranges form .colors .box label,
+.categories .filter-by-price .ranges form .colors .items label,
+.categories .filter-by-price .ranges form .collections .box label,
+.categories .filter-by-price .ranges form .collections .items label {
+  margin: 10px;
+  color: #3bb77e;
+}
+.categories .new-products-side .products-list li {
+  display: flex;
+  margin: 10px auto;
+  align-items: center;
+  padding: 5px 0;
+}
+.categories .new-products-side .products-list li img {
+  width: 70px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-right: 20px;
+}
+.categories .new-products-side .products-list li .info .product-name {
+  margin-bottom: 5px;
+  color: #3bb77e;
+  font-weight: 800;
+  font-size: 20px;
+}
+.categories .new-products-side .products-list li .info .price {
+  color: #555;
+}
+.categories .new-products-side .products-list li .info .rating {
+  color: rgb(238, 154, 0);
+}
+.categories .advertisement img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}/*# sourceMappingURL=categories.css.map */

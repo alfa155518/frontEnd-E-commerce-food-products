@@ -1,0 +1,64 @@
+/******** Start Popular Products *********/
+.container-section {
+  padding: 80px 20px;
+}
+
+/*============= Start Categories Name Nav ============*/
+.categories-name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.categories-name h3 {
+  color: #3bb77e;
+  font-size: 30px;
+  font-weight: 800;
+  padding: 15px;
+  cursor: pointer;
+}
+.categories-name ul {
+  display: flex;
+}
+.categories-name ul li {
+  cursor: pointer;
+  text-transform: capitalize;
+  color: #555;
+  font-size: 20px;
+  padding: 5px;
+  margin: 5px;
+}
+.categories-name ul li::after {
+  position: absolute;
+  width: 0px;
+  height: 3px;
+  background-color: #3bb77e;
+  content: "";
+  left: 50%;
+  bottom: -10px;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transition: 1s ease-in-out;
+  -webkit-transition: 1s ease-in-out;
+  -moz-transition: 1s ease-in-out;
+  -ms-transition: 1s ease-in-out;
+  -o-transition: 1s ease-in-out;
+}
+.categories-name ul li:hover::after {
+  width: 60px;
+  transition: 1s ease-in-out;
+  -webkit-transition: 1s ease-in-out;
+  -moz-transition: 1s ease-in-out;
+  -ms-transition: 1s ease-in-out;
+  -o-transition: 1s ease-in-out;
+}
+
+@media (max-width: 572px) {
+  .categories-name,
+  ul {
+    flex-direction: column;
+    text-align: center;
+  }
+}/*# sourceMappingURL=popular-products.css.map */

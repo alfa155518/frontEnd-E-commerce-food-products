@@ -1,0 +1,32 @@
+// Transition Effect
+@mixin transition($second, $behavior) {
+  transition: $second $behavior;
+  -webkit-transition: $second $behavior;
+  -moz-transition: $second $behavior;
+  -ms-transition: $second $behavior;
+  -o-transition: $second $behavior;
+}
+
+// pseudo Element
+@mixin pseudoElement($width, $height, $bgColor) {
+  position: absolute;
+  width: $width;
+  height: $height;
+  background-color: $bgColor;
+  @content;
+}
+
+// Transform Accessability
+@mixin transform($x, $y) {
+  transform: translate($x, $y);
+  -webkit-transform: translate($x, $y);
+  -moz-transform: translate($x, $y);
+  -ms-transform: translate($x, $y);
+  -o-transform: translate($x, $y);
+}
+
+// Grid System
+@mixin grid($size) {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax($size, 1fr));
+}

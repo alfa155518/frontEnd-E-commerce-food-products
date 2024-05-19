@@ -1,0 +1,52 @@
+@use "../helpers/variables" as *;
+
+/************ Start Header *********/
+header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-bottom: 1px solid $mainColor;
+  .header-links {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    li {
+      margin: 10px;
+      padding: 1px;
+      position: relative;
+      &::before {
+        position: absolute;
+        content: "";
+        background-color: $mainColor;
+        width: 2px;
+        height: 19px;
+        right: -9px;
+      }
+      a {
+        color: $wordsColor;
+      }
+    }
+  }
+  p {
+    font-weight: bold;
+    color: $wordsColor;
+  }
+  .header-support {
+    display: flex;
+    align-items: center;
+    li {
+      padding: 10px;
+      cursor: pointer;
+      .phone-number {
+        color: $mainColor;
+      }
+    }
+  }
+  // ============ Responsive All Screens =============
+  @media (max-width: 1100px) {
+    display: none;
+  }
+}
+
+/************ End Header ************/

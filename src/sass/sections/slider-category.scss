@@ -1,0 +1,23 @@
+@use "../helpers/variables" as *;
+
+.slider-categories {
+  .section-name {
+    padding: 0 21px;
+    letter-spacing: 2px;
+  }
+  .swiper-wrapper {
+    padding: 80px 0;
+  }
+  .swiper-slide {
+    width: 250px;
+    img {
+      width: 100%;
+    }
+  }
+  // =========== Responsive All Screens ============
+  @media (max-width: 572px) {
+    .swiper-slide {
+      width: 150px;
+    }
+  }
+}

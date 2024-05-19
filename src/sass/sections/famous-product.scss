@@ -1,0 +1,159 @@
+@use "../helpers/variables" as *;
+@use "../helpers/mixins" as *;
+
+/* ================== Famous Products =================*/
+.famous-product {
+  @include grid(300px);
+  .list-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    padding: 5px;
+    box-shadow: 0px 0px 3px 1px $wordsColor;
+    border-radius: 15px 0px 10px 0px;
+    -webkit-border-radius: 15px 0px 10px 0px;
+    -moz-border-radius: 15px 0px 10px 0px;
+    -ms-border-radius: 15px 0px 10px 0px;
+    -o-border-radius: 15px 0px 10px 0px;
+    .category-name {
+      padding: 20px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      color: $wordsColor;
+    }
+    // Single Item
+    .item {
+      margin-bottom: 20px;
+      .product {
+        margin: 10px;
+        text-align: center;
+        overflow: hidden;
+
+        // Actions Icons
+        .actions {
+          display: block;
+          @include transition(0.7s, ease-in-out);
+          position: absolute;
+          background-color: $whiteColor;
+          top: 70%;
+          right: -60px;
+          @include transform(-50%, -50%);
+          box-shadow: 0px 0px 6px 1px #aaa;
+          border-radius: 15px 0px 15px 0px;
+          -webkit-border-radius: 15px 0px 15px 0px;
+          -moz-border-radius: 15px 0px 15px 0px;
+          -ms-border-radius: 15px 0px 15px 0px;
+          -o-border-radius: 15px 0px 15px 0px;
+          li {
+            padding: 5px;
+            margin: 5px;
+            position: relative;
+            cursor: pointer;
+            color: $mainColor;
+            font-size: 17px;
+            a {
+              color: $mainColor;
+            }
+            &::before {
+              @include pseudoElement(2px, 20px, $mainColor) {
+                content: "";
+                right: -5px;
+              }
+            }
+            &:hover {
+              svg {
+                @include transition(0.5s, ease-in-out);
+                scale: 1.5;
+              }
+            }
+          }
+        }
+        .discount {
+          background-color: $mainColor;
+          color: $whiteColor;
+          padding: 5px;
+          border-radius: 14px 0px 21px 0px;
+          -webkit-border-radius: 14px 0px 21px 0px;
+          -moz-border-radius: 14px 0px 21px 0px;
+          -ms-border-radius: 14px 0px 21px 0px;
+          -o-border-radius: 14px 0px 21px 0px;
+        }
+        &:hover {
+          .actions {
+            @include transition(0.7s, ease-in-out);
+            right: -17px;
+          }
+          img {
+            @include transition(0.7s, ease-in-out);
+            scale: 1.1;
+          }
+        }
+        img {
+          width: 200px;
+          object-fit: cover;
+          padding: 40px;
+          @include transition(0.7s, ease-in-out);
+        }
+        // Information about Product
+        .info {
+          text-align: left;
+          padding: 5px;
+          h3 {
+            color: $mainColor;
+            font-weight: 800;
+          }
+          // Rating of product
+          .rating {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            .stars {
+              color: $starsColor;
+            }
+            em {
+              color: $wordsColor;
+            }
+          }
+          .brand {
+            font-size: 17px;
+            color: $wordsColor;
+            padding-bottom: 15px;
+          }
+        }
+        // Prices Of Product
+        .prices {
+          display: none;
+          align-items: center;
+          justify-content: space-around;
+          background-color: #5555551c;
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          padding: 5px;
+          .old-price {
+            text-decoration: line-through;
+            color: $wordsColor;
+          }
+          .new-price {
+            color: $mainColor;
+            font-size: 20px;
+          }
+          .add-to-cart {
+            background-color: $mainColor;
+            color: #fff;
+            cursor: pointer;
+            padding: 1px 13px;
+            border-radius: 3px;
+            text-transform: capitalize;
+          }
+        }
+      }
+    }
+  }
+
+  // ============ Responsive All Screens ============
+  @media (max-width: 672px) {
+    @include grid(230px);
+  }
+}

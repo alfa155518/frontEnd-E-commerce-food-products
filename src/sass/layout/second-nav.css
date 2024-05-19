@@ -1,0 +1,106 @@
+/* Start Second Nav Bar */
+.second-nav {
+  padding: 5px 7px;
+  box-shadow: none;
+}
+.second-nav .btn-categories {
+  background: #3bb77e;
+  padding: 8px;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+.second-nav .links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 5px;
+  transition: 1s ease-in-out;
+  -webkit-transition: 1s ease-in-out;
+  -moz-transition: 1s ease-in-out;
+  -ms-transition: 1s ease-in-out;
+  -o-transition: 1s ease-in-out;
+}
+.second-nav .links li {
+  padding: 10px;
+  margin: 5px;
+  position: relative;
+}
+.second-nav .links li::before {
+  position: absolute;
+  width: 0px;
+  height: 2px;
+  background-color: #3bb77e;
+  content: "";
+  left: 50%;
+  bottom: 7px;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transition: 0.8s ease-in-out;
+  -webkit-transition: 0.8s ease-in-out;
+  -moz-transition: 0.8s ease-in-out;
+  -ms-transition: 0.8s ease-in-out;
+  -o-transition: 0.8s ease-in-out;
+}
+.second-nav .links li:hover::before {
+  width: 60px;
+  transition: 0.8s ease-in-out;
+  -webkit-transition: 0.8s ease-in-out;
+  -moz-transition: 0.8s ease-in-out;
+  -ms-transition: 0.8s ease-in-out;
+  -o-transition: 0.8s ease-in-out;
+}
+.second-nav .links li a {
+  color: #555;
+  font-size: 19px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.second-nav .links li a.active {
+  font-weight: bold;
+  color: #3bb77e;
+}
+.second-nav .support {
+  display: flex;
+}
+.second-nav .support h5 {
+  padding: 0 10px;
+}
+.second-nav .support h5 svg {
+  font-size: 30px;
+  color: #3bb77e;
+}
+.second-nav .support > div p {
+  color: #3bb77e;
+  font-size: 17px;
+  font-weight: 900;
+  margin-bottom: 0;
+  margin-left: 10px;
+}
+@media (max-width: 991px) {
+  .second-nav .btn-categories,
+  .second-nav .support {
+    display: none;
+  }
+  .second-nav .links {
+    position: absolute;
+    top: -100%;
+    width: 100%;
+    background-color: rgba(20, 21, 20, 0.8784313725);
+    color: #fff;
+    right: 0;
+    flex-direction: column;
+    z-index: 5;
+    align-items: flex-start;
+  }
+  .second-nav .links a {
+    color: #4caf50 !important;
+  }
+}
+
+/* End Second Nav Bar *//*# sourceMappingURL=second-nav.css.map */

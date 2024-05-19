@@ -1,0 +1,12 @@
+.wrapper-shop .section-name {
+  padding: 0 20px;
+  font-size: 40px;
+}
+.wrapper-shop .shopping-products {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.wrapper-shop .shopping-products aside {
+  flex: 1;
+}/*# sourceMappingURL=shop-page.css.map */

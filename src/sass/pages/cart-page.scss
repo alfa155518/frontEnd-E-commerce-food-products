@@ -1,0 +1,141 @@
+@use "../helpers/mixins" as *;
+@use "../helpers/variables" as *;
+
+.wrapper-cart {
+  // background-color: #e4e4e454;
+  table {
+    border-spacing: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    thead {
+      background-color: $mainColor;
+      color: $whiteColor;
+      tr {
+        th {
+          padding: 20px;
+          font-size: 20px;
+          letter-spacing: 1px;
+          .remove-product {
+            color: red;
+          }
+        }
+      }
+    }
+    tbody {
+      .no-product {
+        display: block;
+        width: 100%;
+        color: $mainColor;
+        text-align: center;
+        font-size: 25px;
+      }
+      tr {
+        box-shadow: 0px 3px 10px -3px $mainColor;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        td {
+          text-align: center;
+          img {
+            max-width: 100px;
+          }
+          .name {
+            color: $mainColor;
+            font-size: 25px;
+            font-weight: bold;
+          }
+          .price {
+            font-size: 25px;
+            font-weight: 800;
+            color: $mainColor;
+          }
+        }
+        .actions {
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          margin-top: 57px;
+          .plus,
+          .minus {
+            box-shadow: 0px 0px 5px 0px $mainColor;
+            padding: 0px 7px;
+            color: $mainColor;
+            cursor: pointer;
+            font-size: 27px;
+            font-weight: 900;
+            line-height: 1;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+          }
+          .quantity {
+            box-shadow: 0px 0px 5px 0px green;
+            cursor: pointer;
+            padding: 3px;
+            color: green;
+            font-size: 25px;
+          }
+        }
+        .trash {
+          font-size: 25px;
+          color: red;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  // Clear Button And Proceed To Check Out Button
+  .cart-action-btn {
+    padding: 20px 0;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    form {
+      button {
+        color: $whiteColor;
+        padding: 6px;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+        font-weight: 900;
+        margin: 20px;
+      }
+      .check-out {
+        background-color: #0075ff;
+        a {
+          color: $whiteColor;
+        }
+      }
+      .clear-cart {
+        background-color: $mainColor;
+      }
+    }
+  }
+  // Total Price
+  .total-price {
+    height: 36px;
+    width: 167px;
+    padding: 7px;
+    font-size: 20px;
+    font-weight: bold;
+    color: green;
+    width: 170px;
+    height: 36px;
+    margin: 10px;
+    border: 1px solid green;
+    border-radius: 10px 0px 10px 0px;
+    -webkit-border-radius: 10px 0px 10px 0px;
+    -moz-border-radius: 10px 0px 10px 0px;
+    -ms-border-radius: 10px 0px 10px 0px;
+    -o-border-radius: 10px 0px 10px 0px;
+  }
+}

@@ -1,0 +1,51 @@
+/************ Start Header *********/
+header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-bottom: 1px solid #3bb77e;
+}
+header .header-links {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+header .header-links li {
+  margin: 10px;
+  padding: 1px;
+  position: relative;
+}
+header .header-links li::before {
+  position: absolute;
+  content: "";
+  background-color: #3bb77e;
+  width: 2px;
+  height: 19px;
+  right: -9px;
+}
+header .header-links li a {
+  color: #555;
+}
+header p {
+  font-weight: bold;
+  color: #555;
+}
+header .header-support {
+  display: flex;
+  align-items: center;
+}
+header .header-support li {
+  padding: 10px;
+  cursor: pointer;
+}
+header .header-support li .phone-number {
+  color: #3bb77e;
+}
+@media (max-width: 1100px) {
+  header {
+    display: none;
+  }
+}
+
+/************ End Header ************//*# sourceMappingURL=header.css.map */

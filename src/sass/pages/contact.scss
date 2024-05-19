@@ -1,0 +1,80 @@
+@use "../helpers/mixins" as *;
+@use "../helpers/variables" as *;
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 20px;
+  margin: 20px;
+  .contact-form {
+    flex: 1;
+    text-align: center;
+    h1 {
+      color: $mainColor;
+      font-size: 35px;
+      letter-spacing: 2px;
+      font-weight: 800;
+    }
+    form {
+      input {
+        width: 100%;
+        outline: none;
+        border: none;
+        background-color: $mainColor;
+        color: $whiteColor;
+        font-size: 19px;
+        padding: 10px;
+        margin: 10px;
+        border-radius: 50px;
+        @include transition(0.5s, ease-in-out);
+        &::placeholder {
+          color: $wordsColor;
+        }
+        &:focus {
+          scale: 1.1;
+          @include transition(0.5s, ease-in-out);
+        }
+      }
+      textarea {
+        width: 100%;
+        height: 100px;
+        resize: none;
+        padding: 5px;
+        outline: none;
+        border: 1px solid $mainColor;
+        margin-bottom: 30px;
+      }
+      button {
+        width: 90%;
+        background-color: $mainColor;
+        color: $whiteColor;
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        letter-spacing: 2px;
+        font-size: 20px;
+        font-weight: bold;
+        @include transition(0.5s, ease-in-out);
+        &:hover {
+          scale: 1.1;
+          @include transition(1s, ease-in-out);
+        }
+      }
+    }
+  }
+  .contact-img {
+    flex: 1;
+    padding: 20px 0;
+    text-align: center;
+    img {
+      width: 400px;
+      object-fit: cover;
+      @media (max-width: 472px) {
+        width: 250px;
+      }
+    }
+  }
+}

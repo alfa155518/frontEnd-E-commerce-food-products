@@ -1,0 +1,60 @@
+.home-page-slide {
+  background-image: url("../../images/blog-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  position: relative;
+}
+.home-page-slide article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  text-align: center;
+}
+.home-page-slide article::before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(49, 45, 45, 0.23);
+  content: "";
+  top: 0;
+  z-index: -1;
+}
+.home-page-slide article h1 {
+  color: #ffc107;
+  line-height: 2;
+}
+.home-page-slide article .offer {
+  color: #ffc107;
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+.home-page-slide article form {
+  width: 50%;
+}
+.home-page-slide article form input {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+}
+.home-page-slide article form .subscribe {
+  top: 0;
+  right: -23px;
+  line-height: 2.5;
+  outline: none;
+  border: none;
+  background: #3bb77e;
+  cursor: pointer;
+  color: #fff;
+}
+@media (max-width: 572px) {
+  .home-page-slide .subscribe {
+    display: none;
+  }
+}/*# sourceMappingURL=home-page-slider.css.map */

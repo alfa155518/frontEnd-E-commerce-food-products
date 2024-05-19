@@ -1,0 +1,17 @@
+@use "../helpers/mixins" as *;
+@use "../helpers/variables" as *;
+
+.wrapper-shop {
+  .section-name {
+    padding: 0 20px;
+    font-size: 40px;
+  }
+  .shopping-products {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    aside {
+      flex: 1;
+    }
+  }
+}

@@ -1,0 +1,148 @@
+@use "../helpers/variables" as *;
+@use "../helpers/mixins" as *;
+
+footer {
+  background-color: #006b0033;
+  // All List of Links
+  .wrapper-links {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin: 60px 0;
+    // Single List of Links
+    .links {
+      flex: 1;
+      padding: 5px;
+      margin: 10px;
+      text-align: center;
+      .category {
+        font-weight: 900;
+        font-size: 27px;
+        color: $wordsColor;
+        margin-bottom: 20px;
+        img {
+          width: 150px;
+        }
+      }
+      p {
+        line-height: 1.6;
+        font-size: 16px;
+      }
+      li:not(:first-child) {
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        cursor: pointer;
+        svg {
+          color: $mainColor;
+          font-size: 30px;
+          margin-bottom: 10px;
+        }
+        strong {
+          width: 100%;
+        }
+        a {
+          letter-spacing: 2px;
+          font-weight: bold;
+          font-size: 18px;
+          color: $wordsColor;
+          @include transition(0.5s, ease-in-out);
+          &:hover {
+            scale: 1.2;
+            @include transition(0.5s, ease-in-out);
+          }
+        }
+        img {
+          width: 200px;
+          padding: 10px;
+          @include transition(0.5s, ease-in-out);
+          &:hover {
+            scale: 1.1;
+            @include transition(0.5s, ease-in-out);
+          }
+        }
+      }
+    }
+  }
+}
+
+.wrapper-copyright {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 10px 15px 10px;
+  margin-top: -70px;
+  .all-rights {
+    margin: 10px 0;
+    padding: 10px 0;
+    p {
+      font-size: 17px;
+      color: #444;
+      margin-bottom: 2px;
+      em {
+        color: $mainColor;
+        font-weight: bold;
+        font-size: 20px;
+      }
+    }
+    span {
+      letter-spacing: 2px;
+      font-size: 20px;
+      color: $wordsColor;
+    }
+  }
+  .call-us {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+    .item {
+      display: flex;
+      align-items: center;
+      margin: 5px;
+      padding: 5px;
+      .phone {
+        color: $mainColor;
+        padding: 0 10px;
+        font-size: 25px;
+      }
+      .number {
+        strong {
+          display: block;
+          color: $mainColor;
+          font-size: 22px;
+          font-weight: bold;
+        }
+        span {
+          color: $wordsColor;
+        }
+      }
+    }
+  }
+  .socials {
+    display: flex;
+    align-items: center;
+    // flex-wrap: wrap;
+    margin: 20px;
+    li {
+      margin: 10px;
+      background-color: $mainColor;
+      color: $whiteColor;
+      padding: 6px;
+      border-radius: 50%;
+      line-height: 0.2;
+      font-size: 20px;
+      cursor: pointer;
+      @include transition(0.6s, ease-in-out);
+      &:hover {
+        @include transition(0.6s, ease-in-out);
+        scale: 1.3;
+      }
+    }
+  }
+}

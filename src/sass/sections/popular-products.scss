@@ -1,0 +1,51 @@
+@use "../helpers/variables" as *;
+@use "../helpers/mixins" as *;
+
+/******** Start Popular Products *********/
+.container-section {
+  padding: 80px 20px;
+}
+/*============= Start Categories Name Nav ============*/
+.categories-name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  h3 {
+    color: $mainColor;
+    font-size: 30px;
+    font-weight: 800;
+    padding: 15px;
+    cursor: pointer;
+  }
+  ul {
+    display: flex;
+    li {
+      cursor: pointer;
+      text-transform: capitalize;
+      color: $wordsColor;
+      font-size: 20px;
+      padding: 5px;
+      margin: 5px;
+      &::after {
+        @include pseudoElement(0px, 3px, $mainColor) {
+          content: "";
+          left: 50%;
+          bottom: -10px;
+          @include transform(-50%, -50%);
+          @include transition(1s, ease-in-out);
+        }
+      }
+      &:hover::after {
+        width: 60px;
+        @include transition(1s, ease-in-out);
+      }
+    }
+  }
+}
+@media (max-width: 572px) {
+  .categories-name,
+  ul {
+    flex-direction: column;
+    text-align: center;
+  }
+}

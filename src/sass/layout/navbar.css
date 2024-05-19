@@ -1,0 +1,101 @@
+/* Start Nav Bar */
+nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  box-shadow: 0px 2px 6px -2px #aaa;
+}
+nav .logo img {
+  max-width: 140px;
+}
+nav form {
+  position: relative;
+}
+nav form input {
+  width: 100%;
+  padding: 6px;
+  outline: none;
+}
+nav form button {
+  position: absolute;
+  right: 1px;
+  line-height: 2;
+  cursor: pointer;
+  background-color: #3bb77e;
+  color: #fff;
+  outline: none;
+  border: none;
+}
+nav .actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+nav .actions li {
+  padding: 5px;
+  margin: 5px;
+}
+nav .actions li a {
+  color: #555;
+  position: relative;
+}
+nav .actions li a .number {
+  position: absolute;
+  background: #3bb77e;
+  color: #fff;
+  top: -20px;
+  left: 11px;
+  border-radius: 50%;
+  padding: 0px 5px;
+}
+nav .actions li a span {
+  font-weight: bold;
+  font-size: 23px;
+}
+nav .actions li a span img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+nav .actions li .user-account {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+nav .actions li .user-account span {
+  margin-right: 7px;
+}
+nav .bars {
+  color: #3bb77e;
+  font-size: 23px;
+  cursor: pointer;
+  margin: 10px;
+  z-index: 10;
+  display: none;
+}
+@media (max-width: 991px) {
+  nav form {
+    display: none;
+  }
+  nav .bars {
+    display: block;
+  }
+}
+@media (max-width: 642px) {
+  nav {
+    flex-direction: column;
+  }
+  nav .actions {
+    flex-direction: column;
+  }
+  nav .bars {
+    padding-top: 30px;
+  }
+}
+
+/* End Nav Bar *//*# sourceMappingURL=navbar.css.map */
