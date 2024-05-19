@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/frontEnd-E-commerce-food-products/static/css/main.447109cc.css",
-    "main.js": "/frontEnd-E-commerce-food-products/static/js/main.faccd8b6.js",
+    "main.js": "/frontEnd-E-commerce-food-products/static/js/main.e7616061.js",
     "static/media/category-3.gif": "/frontEnd-E-commerce-food-products/static/media/category-3.e2149a4c6b737d9af1c2.gif",
     "static/media/category-2.gif": "/frontEnd-E-commerce-food-products/static/media/category-2.b79407027d641bbd3248.gif",
     "static/media/category-1.gif": "/frontEnd-E-commerce-food-products/static/media/category-1.3ef4842d57581b36a0a4.gif",
@@ -44,10 +44,10 @@
     "static/media/service-5.svg": "/frontEnd-E-commerce-food-products/static/media/service-5.a41b48d5c6678b96129a842057548c86.svg",
     "index.html": "/frontEnd-E-commerce-food-products/index.html",
     "main.447109cc.css.map": "/frontEnd-E-commerce-food-products/static/css/main.447109cc.css.map",
-    "main.faccd8b6.js.map": "/frontEnd-E-commerce-food-products/static/js/main.faccd8b6.js.map"
+    "main.e7616061.js.map": "/frontEnd-E-commerce-food-products/static/js/main.e7616061.js.map"
   },
   "entrypoints": [
     "static/css/main.447109cc.css",
-    "static/js/main.faccd8b6.js"
+    "static/js/main.e7616061.js"
   ]
 }
