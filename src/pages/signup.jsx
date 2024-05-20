@@ -6,6 +6,7 @@ import { UserContextData } from "../context/UserContext";
 import img from "../images/blog-3.jpg";
 import useHandler from "../hooks/useHandlerSignup";
 import "../sass/pages/signup-login.css";
+import { Link } from "react-router-dom";
 
 function Signup() {
   const {
@@ -36,6 +37,7 @@ function Signup() {
     user,
     setUser
   );
+  // console.log(user.data.status);
   function handleImage(e) {
     setPhoto(e.target.files[0]);
   }
@@ -134,9 +136,14 @@ function Signup() {
           <button className="btn-sign-up" type="submit" onClick={handelSignUp}>
             Sign Up
           </button>
+          {user?.data?.status === "success" && (
+            <Link className="continue" to="/login">
+              Click Here
+            </Link>
+          )}
           <p className="login-text">
-            Already have an account?{" "}
-            <a href="/frontEnd-E-commerce-food-products/login">Login</a>
+            Already have an account?
+            <Link to="/login">Login</Link>
           </p>
         </form>
       </div>

@@ -14,7 +14,7 @@ const message = (message, status) => {
   }
 };
 
-function useHandleSubmit(email, password, setError) {
+function useHandleSubmit(email, password, setUser, setError) {
   const handelLogin = async (e) => {
     e.preventDefault();
     try {
@@ -38,9 +38,10 @@ function useHandleSubmit(email, password, setError) {
             message("Login Successfully", "success");
             localStorage.setItem("token", res.data.token);
             localStorage.setItem("status", "success");
+            setUser(res);
             setTimeout(() => {
-              window.location = "/frontEnd-E-commerce-food-products";
-            }, 3000);
+              setUser("");
+            }, 10000);
           }
         });
     } catch (error) {

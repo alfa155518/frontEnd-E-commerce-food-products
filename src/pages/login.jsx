@@ -1,17 +1,24 @@
 import { MdOutlineMail } from "react-icons/md";
 import { RiLockPasswordLine } from "react-icons/ri";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import useHandler from "../hooks/useHandlerLogin";
 import img from "../images/blog-2.jpg";
 import "../sass/pages/signup-login.css";
+import { Link } from "react-router-dom";
+import { UserContextData } from "../context/UserContext";
 
 function Login() {
   let [email, setEmail] = useState("");
   let [password, setPassword] = useState("");
   let [error, setError] = useState("");
-
+  const { user, setUser } = useContext(UserContextData);
   // Costume Hook To Handle Login User
-  let [handelLogin, alertMessage] = useHandler(email, password, setError);
+  let [handelLogin, alertMessage] = useHandler(
+    email,
+    password,
+    setUser,
+    setError
+  );
   return (
     <section className="login-section">
       <div className="container-img">
@@ -59,9 +66,13 @@ function Login() {
           <button className="btn-login" type="submit" onClick={handelLogin}>
             Log in
           </button>
+          {user?.data?.status === "success" && (
+            <Link className="continue" to="/">
+              Click To Continue
+            </Link>
+          )}
           <p className="login-text">
-            Don't have an account?{" "}
-            <a href="/frontEnd-E-commerce-food-products/signup">Sign-up</a>
+            Don't have an account? <Link to="/signup">Sign-up</Link>
           </p>
         </form>
       </div>

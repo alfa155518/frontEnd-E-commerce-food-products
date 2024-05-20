@@ -7,7 +7,9 @@ import { FaBarsStaggered } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import "../sass/layout/navbar.css";
 import axios from "axios";
+import { useState } from "react";
 function NavBar() {
+  const [logoutStatus, setLogoutStatus] = useState({});
   async function handleLogout() {
     try {
       await axios.delete(
@@ -20,7 +22,8 @@ function NavBar() {
         }
       );
       await localStorage.clear();
-      window.location.href = "/frontend-E-commerce-food-products-/signup";
+      setLogoutStatus("success");
+      // window.location.href = "/frontend-E-commerce-food-products-/signup";
     } catch (error) {
       console.log(error);
     }
@@ -72,7 +75,10 @@ function NavBar() {
         </li>
         <li>
           {localStorage.getItem("status") ? (
-            <Link className="user-account" to="#" onClick={handleLogout}>
+            <Link
+              className="user-account"
+              to={logoutStatus === "success" && "/signup"}
+              onClick={handleLogout}>
               <span>
                 <img src={localStorage.getItem("photo")} alt="user" />
               </span>

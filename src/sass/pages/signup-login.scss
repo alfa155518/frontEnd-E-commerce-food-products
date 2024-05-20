@@ -1,4 +1,4 @@
-@use '../helpers/variables' as *;
+@use "../helpers/variables" as *;
 
 .sign-up-section,
 .login-section {
@@ -66,6 +66,13 @@
           font-size: 20px;
           font-weight: bold;
         }
+      }
+      .continue {
+        display: block;
+        margin: 10px;
+        color: $mainColor;
+        font-size: 20px;
+        font-weight: bold;
       }
       .btn-sign-up,
       .btn-login {

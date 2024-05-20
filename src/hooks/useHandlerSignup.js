@@ -49,13 +49,13 @@ function useHandleSubmit(
           await setUser(res);
           if (res.data.status === "success") {
             localStorage.setItem("token", res.data.token);
-            setTimeout(() => {
-              window.location = "/frontEnd-E-commerce-food-products/login";
-            }, 3000);
           }
           if (res.data.status === "success") {
             message("Account Created Successfully", "success");
           }
+          setTimeout(() => {
+            setUser("");
+          }, 3000);
         });
     } catch (error) {
       if (error.response?.data?.status === "error") {

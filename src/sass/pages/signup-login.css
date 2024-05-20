@@ -80,6 +80,14 @@
   font-size: 20px;
   font-weight: bold;
 }
+.sign-up-section .container-form form .continue,
+.login-section .container-form form .continue {
+  display: block;
+  margin: 10px;
+  color: #3bb77e;
+  font-size: 20px;
+  font-weight: bold;
+}
 .sign-up-section .container-form form .btn-sign-up,
 .sign-up-section .container-form form .btn-login,
 .login-section .container-form form .btn-sign-up,
